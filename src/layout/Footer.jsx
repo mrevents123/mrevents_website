@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { QUICK_LINKS, SERVICE_NAMES, SOCIALS, CONTACT_INFO } from "../constants";
-import Container from "./ui/Container";
+import Container from "../components/ui/Container";
 import logo from "../assets/MrEvents-removebg-preview.png";
 
 const Footer = () => {
@@ -99,11 +99,16 @@ const ContactColumn = () => (
         <MapPin className="w-4 h-4 3xl:w-5 3xl:h-5 4xl:w-6 4xl:h-6 text-gold mt-0.5 shrink-0" />
         <span>{CONTACT_INFO.address}</span>
       </li>
-      <li className="flex items-center gap-3 text-xs sm:text-sm 3xl:text-base 4xl:text-lg text-white/40">
-        <Phone className="w-4 h-4 3xl:w-5 3xl:h-5 4xl:w-6 4xl:h-6 text-gold shrink-0" />
-        <a href={CONTACT_INFO.phoneHref} className="hover:text-gold transition-colors">
-          {CONTACT_INFO.phone}
-        </a>
+      <li className="flex items-start gap-3 text-xs sm:text-sm 3xl:text-base 4xl:text-lg text-white/40">
+        <Phone className="w-4 h-4 3xl:w-5 3xl:h-5 4xl:w-6 4xl:h-6 text-gold mt-0.5 shrink-0" />
+        <div className="flex flex-col gap-1">
+          <a href={CONTACT_INFO.phoneHref} className="hover:text-gold transition-colors">
+            {CONTACT_INFO.phone}
+          </a>
+          <a href={CONTACT_INFO.phoneAltHref} className="hover:text-gold transition-colors">
+            {CONTACT_INFO.phoneAlt}
+          </a>
+        </div>
       </li>
       <li className="flex items-center gap-3 text-xs sm:text-sm 3xl:text-base 4xl:text-lg text-white/40">
         <Mail className="w-4 h-4 3xl:w-5 3xl:h-5 4xl:w-6 4xl:h-6 text-gold shrink-0" />

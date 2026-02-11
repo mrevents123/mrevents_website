@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/ui/WhatsAppButton";
 import "./App.css";
