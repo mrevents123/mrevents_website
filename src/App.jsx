@@ -15,7 +15,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 const Loader = () => (
   <div className="min-h-screen flex items-center justify-center bg-white dark:bg-navy-dark">
-    <div className="w-10 h-10 border-4 border-gold/30 border-t-gold rounded-full animate-spin" />
+    <div className="w-10 h-10 2xl:w-12 2xl:h-12 3xl:w-14 3xl:h-14 4xl:w-16 4xl:h-16 border-4 3xl:border-[5px] 4xl:border-[6px] border-gold/30 border-t-gold rounded-full animate-spin" />
   </div>
 );
 

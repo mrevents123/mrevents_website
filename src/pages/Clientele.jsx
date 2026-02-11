@@ -10,7 +10,7 @@ const Clientele = () => (
       description="Explore the trusted clients and brands that have chosen MR Events for their weddings, corporate events, and celebrations."
       path="/clientele"
     />
-    <div className="bg-white dark:bg-navy-dark pt-28 sm:pt-32 pb-16 sm:pb-20">
+    <div className="bg-white dark:bg-navy-dark pt-28 sm:pt-32 2xl:pt-36 3xl:pt-40 4xl:pt-48 pb-16 sm:pb-20 2xl:pb-24 3xl:pb-28 4xl:pb-36">
       <Container>
         <SectionHeader
           tag="Our Clients"

@@ -10,9 +10,9 @@ const WhatsAppButton = () => {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+      className="fixed bottom-6 right-6 z-50 w-14 h-14 sm:w-16 sm:h-16 2xl:w-[4.5rem] 2xl:h-[4.5rem] 3xl:w-20 3xl:h-20 4xl:w-24 4xl:h-24 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
     >
-      <MessageCircle className="w-7 h-7 sm:w-8 sm:h-8" />
+      <MessageCircle className="w-7 h-7 sm:w-8 sm:h-8 2xl:w-9 2xl:h-9 3xl:w-10 3xl:h-10 4xl:w-12 4xl:h-12" />
     </a>
   );
 };

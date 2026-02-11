@@ -6,10 +6,10 @@ import logo from "../assets/MrEvents-removebg-preview.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-navy text-white pt-14 sm:pt-16 3xl:pt-20 4xl:pt-24">
+    <footer className="bg-navy text-white pt-14 sm:pt-16 2xl:pt-18 3xl:pt-20 4xl:pt-24">
       {/* Footer Grid */}
       <Container>
-        <div className="pb-12 sm:pb-14 3xl:pb-18 4xl:pb-22 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 3xl:gap-20 4xl:gap-24">
+        <div className="pb-12 sm:pb-14 2xl:pb-16 3xl:pb-18 4xl:pb-22 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 2xl:gap-18 3xl:gap-20 4xl:gap-24">
           <BrandColumn />
           <LinksColumn title="Quick Links" items={QUICK_LINKS} />
           <ServicesColumn />
@@ -20,7 +20,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <Container>
-          <div className="py-5 sm:py-6 4xl:py-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px] sm:text-xs 3xl:text-sm 4xl:text-base text-white/30">
+          <div className="py-5 sm:py-6 2xl:py-7 3xl:py-7 4xl:py-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px] sm:text-xs 2xl:text-[0.8rem] 3xl:text-sm 4xl:text-base text-white/30">
             <p>&copy; {new Date().getFullYear()} MR Events. All rights reserved.</p>
             <p>Designed with ♥ for unforgettable experiences.</p>
           </div>
@@ -31,9 +31,9 @@ const Footer = () => {
 };
 
 const BrandColumn = () => (
-  <div className="space-y-4">
-    <img src={logo} alt="MR Events" className="h-28 sm:h-32 3xl:h-36 4xl:h-40 w-auto" />
-    <p className="text-white/50 text-xs sm:text-sm 3xl:text-base 4xl:text-lg leading-relaxed max-w-xs">
+  <div className="space-y-4 2xl:space-y-5 4xl:space-y-6">
+    <img src={logo} alt="MR Events" className="h-28 sm:h-32 2xl:h-34 3xl:h-36 4xl:h-40 w-auto" />
+    <p className="text-white/50 text-xs sm:text-sm 2xl:text-[0.85rem] 3xl:text-base 4xl:text-lg leading-relaxed max-w-xs 2xl:max-w-sm 4xl:max-w-md">
       Curating signature experiences that leave lasting impressions.
       Your vision, our expertise.
     </p>
@@ -45,9 +45,9 @@ const BrandColumn = () => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label={s.label}
-          className="w-9 h-9 sm:w-10 sm:h-10 3xl:w-11 3xl:h-11 4xl:w-13 4xl:h-13 rounded-full bg-white/5 hover:bg-gold/20 flex items-center justify-center text-white/50 hover:text-gold transition-all duration-200"
+          className="w-9 h-9 sm:w-10 sm:h-10 2xl:w-11 2xl:h-11 3xl:w-11 3xl:h-11 4xl:w-13 4xl:h-13 rounded-full bg-white/5 hover:bg-gold/20 flex items-center justify-center text-white/50 hover:text-gold transition-all duration-200"
         >
-          <s.icon className="w-4 h-4 3xl:w-5 3xl:h-5 4xl:w-6 4xl:h-6" />
+          <s.icon className="w-4 h-4 2xl:w-4.5 2xl:h-4.5 3xl:w-5 3xl:h-5 4xl:w-6 4xl:h-6" />
         </a>
       ))}
     </div>
@@ -56,15 +56,15 @@ const BrandColumn = () => (
 
 const LinksColumn = ({ title, items }) => (
   <div>
-    <h4 className="text-xs sm:text-sm 3xl:text-base 4xl:text-lg font-semibold uppercase tracking-widest text-gold mb-4 sm:mb-5 4xl:mb-7">
+    <h4 className="text-xs sm:text-sm 2xl:text-[0.85rem] 3xl:text-base 4xl:text-lg font-semibold uppercase tracking-widest text-gold mb-4 sm:mb-5 2xl:mb-6 4xl:mb-7">
       {title}
     </h4>
-    <ul className="space-y-2.5 sm:space-y-3 4xl:space-y-4">
+    <ul className="space-y-2.5 sm:space-y-3 2xl:space-y-3.5 4xl:space-y-4">
       {items.map((link) => (
         <li key={link.name}>
           <Link
             to={link.path}
-            className="text-xs sm:text-sm 3xl:text-base 4xl:text-lg text-white/40 hover:text-gold transition-colors duration-200"
+            className="text-xs sm:text-sm 2xl:text-[0.85rem] 3xl:text-base 4xl:text-lg text-white/40 hover:text-gold transition-colors duration-200"
           >
             {link.name}
           </Link>
@@ -76,12 +76,12 @@ const LinksColumn = ({ title, items }) => (
 
 const ServicesColumn = () => (
   <div>
-    <h4 className="text-xs sm:text-sm 3xl:text-base 4xl:text-lg font-semibold uppercase tracking-widest text-gold mb-4 sm:mb-5 4xl:mb-7">
+    <h4 className="text-xs sm:text-sm 2xl:text-[0.85rem] 3xl:text-base 4xl:text-lg font-semibold uppercase tracking-widest text-gold mb-4 sm:mb-5 2xl:mb-6 4xl:mb-7">
       Our Services
     </h4>
-    <ul className="space-y-2.5 sm:space-y-3 4xl:space-y-4">
+    <ul className="space-y-2.5 sm:space-y-3 2xl:space-y-3.5 4xl:space-y-4">
       {SERVICE_NAMES.map((service) => (
-        <li key={service} className="text-xs sm:text-sm 3xl:text-base 4xl:text-lg text-white/40">
+        <li key={service} className="text-xs sm:text-sm 2xl:text-[0.85rem] 3xl:text-base 4xl:text-lg text-white/40">
           {service}
         </li>
       ))}
@@ -91,16 +91,16 @@ const ServicesColumn = () => (
 
 const ContactColumn = () => (
   <div>
-    <h4 className="text-xs sm:text-sm 3xl:text-base 4xl:text-lg font-semibold uppercase tracking-widest text-gold mb-4 sm:mb-5 4xl:mb-7">
+    <h4 className="text-xs sm:text-sm 2xl:text-[0.85rem] 3xl:text-base 4xl:text-lg font-semibold uppercase tracking-widest text-gold mb-4 sm:mb-5 2xl:mb-6 4xl:mb-7">
       Contact Us
     </h4>
-    <ul className="space-y-3 sm:space-y-3.5 4xl:space-y-5">
-      <li className="flex items-start gap-3 text-xs sm:text-sm 3xl:text-base 4xl:text-lg text-white/40">
-        <MapPin className="w-4 h-4 3xl:w-5 3xl:h-5 4xl:w-6 4xl:h-6 text-gold mt-0.5 shrink-0" />
+    <ul className="space-y-3 sm:space-y-3.5 2xl:space-y-4 4xl:space-y-5">
+      <li className="flex items-start gap-3 text-xs sm:text-sm 2xl:text-[0.85rem] 3xl:text-base 4xl:text-lg text-white/40">
+        <MapPin className="w-4 h-4 2xl:w-4.5 2xl:h-4.5 3xl:w-5 3xl:h-5 4xl:w-6 4xl:h-6 text-gold mt-0.5 shrink-0" />
         <span>{CONTACT_INFO.address}</span>
       </li>
-      <li className="flex items-start gap-3 text-xs sm:text-sm 3xl:text-base 4xl:text-lg text-white/40">
-        <Phone className="w-4 h-4 3xl:w-5 3xl:h-5 4xl:w-6 4xl:h-6 text-gold mt-0.5 shrink-0" />
+      <li className="flex items-start gap-3 text-xs sm:text-sm 2xl:text-[0.85rem] 3xl:text-base 4xl:text-lg text-white/40">
+        <Phone className="w-4 h-4 2xl:w-4.5 2xl:h-4.5 3xl:w-5 3xl:h-5 4xl:w-6 4xl:h-6 text-gold mt-0.5 shrink-0" />
         <div className="flex flex-col gap-1">
           <a href={CONTACT_INFO.phoneHref} className="hover:text-gold transition-colors">
             {CONTACT_INFO.phone}
@@ -110,8 +110,8 @@ const ContactColumn = () => (
           </a>
         </div>
       </li>
-      <li className="flex items-center gap-3 text-xs sm:text-sm 3xl:text-base 4xl:text-lg text-white/40">
-        <Mail className="w-4 h-4 3xl:w-5 3xl:h-5 4xl:w-6 4xl:h-6 text-gold shrink-0" />
+      <li className="flex items-center gap-3 text-xs sm:text-sm 2xl:text-[0.85rem] 3xl:text-base 4xl:text-lg text-white/40">
+        <Mail className="w-4 h-4 2xl:w-4.5 2xl:h-4.5 3xl:w-5 3xl:h-5 4xl:w-6 4xl:h-6 text-gold shrink-0" />
         <a href={CONTACT_INFO.emailHref} className="hover:text-gold transition-colors">
           {CONTACT_INFO.email}
         </a>

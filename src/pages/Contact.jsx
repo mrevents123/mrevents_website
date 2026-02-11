@@ -10,7 +10,7 @@ const Contact = () => (
       description="Get in touch with MR Events. Reach out for enquiries, bookings, and custom event quotes."
       path="/contact"
     />
-    <div className="bg-white dark:bg-navy-dark pt-28 sm:pt-32 pb-16 sm:pb-20">
+    <div className="bg-white dark:bg-navy-dark pt-28 sm:pt-32 2xl:pt-36 3xl:pt-40 4xl:pt-48 pb-16 sm:pb-20 2xl:pb-24 3xl:pb-28 4xl:pb-36">
       <Container>
         <SectionHeader
           tag="Get in Touch"

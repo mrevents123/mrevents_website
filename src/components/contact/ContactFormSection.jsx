@@ -31,13 +31,13 @@ const ContactFormSection = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 sm:gap-10 3xl:gap-14">
+    <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 sm:gap-10 2xl:gap-12 3xl:gap-14 4xl:gap-18">
       <div className="lg:col-span-3">
         {submitted ? <SuccessMessage /> : (
           <ContactForm form={form} errors={errors} onChange={handleChange} onSubmit={handleSubmit} />
         )}
       </div>
-      <div className="lg:col-span-2 space-y-6">
+      <div className="lg:col-span-2 space-y-6 2xl:space-y-7 3xl:space-y-8 4xl:space-y-10">
         <ContactInfoCard />
         <MapEmbed />
       </div>
