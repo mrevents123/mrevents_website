@@ -1,1 +1,82 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-navy: #222653;
+  --color-navy-dark: #0F1829;
+  --color-navy-light: #2A3A5C;
+  --color-gold: #D4AF37;
+  --color-gold-light: #E8C84A;
+  --color-gold-dark: #B8961F;
+  --color-cream: #FAFAF7;
+  --color-gray-soft: #F5F5F0;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+  --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2560px;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  @apply bg-white text-navy transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-navy-dark text-white;
+}
+
+/* Glassmorphism - only used on scroll */
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.25) 100%
+  );
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  backdrop-filter: blur(24px) saturate(1.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 8px 32px rgba(30, 42, 74, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.dark .glass {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 24, 41, 0.75) 0%,
+    rgba(15, 24, 41, 0.55) 100%
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glass-mobile {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.35) 100%
+  );
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  backdrop-filter: blur(24px) saturate(1.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 40px rgba(30, 42, 74, 0.12);
+}
+
+.dark .glass-mobile {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 24, 41, 0.85) 0%,
+    rgba(15, 24, 41, 0.65) 100%
+  );
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
