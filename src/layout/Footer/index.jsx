@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { QUICK_LINKS } from "../../constants";
 import Container from "../../components/ui/Container";
 import { BrandColumn, LinksColumn, ServicesColumn, ContactColumn } from "./FooterColumns";
@@ -17,7 +18,13 @@ const Footer = () => (
       <Container>
         <div className="py-5 sm:py-6 2xl:py-7 3xl:py-7 4xl:py-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px] sm:text-xs 2xl:text-[0.8rem] 3xl:text-sm 4xl:text-base text-white/30">
           <p>&copy; {new Date().getFullYear()} MR Events. All rights reserved.</p>
-          <p>Designed with ♥ for unforgettable experiences.</p>
+          <div className="flex items-center gap-4">
+            <Link to="/privacy-policy" className="hover:text-gold transition-colors">
+              Privacy Policy
+            </Link>
+            <span className="text-white/10">|</span>
+            <p>Designed with ♥ for unforgettable experiences.</p>
+          </div>
         </div>
       </Container>
     </div>

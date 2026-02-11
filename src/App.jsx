@@ -4,6 +4,7 @@ import { Header, Footer } from "./layout";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/ui/WhatsAppButton";
 import ErrorBoundary from "./components/ui/ErrorBoundary";
+import CookieConsent from "./components/ui/CookieConsent";
 import "./App.css";
 
 const Home = lazy(() => import("./pages/Home"));
@@ -12,6 +13,7 @@ const Services = lazy(() => import("./pages/Services"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Clientele = lazy(() => import("./pages/Clientele"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 
 const Loader = () => (
   <div className="min-h-screen flex items-center justify-center bg-white dark:bg-navy-dark">
@@ -40,12 +42,14 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/clientele" element={<Clientele />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </main>
       <Footer />
       <WhatsAppButton />
+      <CookieConsent />
     </ErrorBoundary>
   );
 }

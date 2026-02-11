@@ -5,3 +5,4 @@ export { SOCIALS } from "./socials";
 export { CONTACT_INFO } from "./contact";
 export { MISSION_VISION, VALUES, TEAM } from "./about";
 export { CLIENTELE, CLIENTELE_CATEGORIES } from "./clientele";
+export { PRIVACY_POLICY } from "./privacy";
