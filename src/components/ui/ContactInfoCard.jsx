@@ -10,10 +10,7 @@ const ContactInfoCard = () => (
     </div>
     <div className="flex items-start gap-3 4xl:gap-4 text-sm 2xl:text-[0.9rem] 3xl:text-base 4xl:text-lg text-navy/60 dark:text-white/60">
       <Phone className="w-5 h-5 3xl:w-6 3xl:h-6 4xl:w-7 4xl:h-7 text-gold shrink-0 mt-0.5" />
-      <div className="flex flex-col gap-1">
-        <a href={CONTACT_INFO.phoneHref} className="hover:text-gold transition-colors">{CONTACT_INFO.phone}</a>
-        <a href={CONTACT_INFO.phoneAltHref} className="hover:text-gold transition-colors">{CONTACT_INFO.phoneAlt}</a>
-      </div>
+      <a href={CONTACT_INFO.phoneHref} className="hover:text-gold transition-colors">{CONTACT_INFO.phone}</a>
     </div>
     <div className="flex items-center gap-3 4xl:gap-4 text-sm 2xl:text-[0.9rem] 3xl:text-base 4xl:text-lg text-navy/60 dark:text-white/60">
       <Mail className="w-5 h-5 3xl:w-6 3xl:h-6 4xl:w-7 4xl:h-7 text-gold shrink-0" />

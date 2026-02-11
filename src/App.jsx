@@ -1,9 +1,9 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import Header from "./layout/Header";
-import Footer from "./layout/Footer";
+import { Header, Footer } from "./layout";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/ui/WhatsAppButton";
+import ErrorBoundary from "./components/ui/ErrorBoundary";
 import "./App.css";
 
 const Home = lazy(() => import("./pages/Home"));
@@ -21,7 +21,7 @@ const Loader = () => (
 
 function App() {
   return (
-    <>
+    <ErrorBoundary>
       {/* Skip Navigation for accessibility */}
       <a
         href="#main-content"
@@ -46,7 +46,7 @@ function App() {
       </main>
       <Footer />
       <WhatsAppButton />
-    </>
+    </ErrorBoundary>
   );
 }
 

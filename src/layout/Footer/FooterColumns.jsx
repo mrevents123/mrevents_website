@@ -1,36 +1,9 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
-import { QUICK_LINKS, SERVICE_NAMES, SOCIALS, CONTACT_INFO } from "../constants";
-import Container from "../components/ui/Container";
-import logo from "../assets/MrEvents-removebg-preview.png";
+import { SERVICE_NAMES, SOCIALS, CONTACT_INFO } from "../../constants";
+import logo from "../../assets/MrEvents-removebg-preview.png";
 
-const Footer = () => {
-  return (
-    <footer className="bg-navy text-white pt-14 sm:pt-16 2xl:pt-18 3xl:pt-20 4xl:pt-24">
-      {/* Footer Grid */}
-      <Container>
-        <div className="pb-12 sm:pb-14 2xl:pb-16 3xl:pb-18 4xl:pb-22 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 2xl:gap-18 3xl:gap-20 4xl:gap-24">
-          <BrandColumn />
-          <LinksColumn title="Quick Links" items={QUICK_LINKS} />
-          <ServicesColumn />
-          <ContactColumn />
-        </div>
-      </Container>
-
-      {/* Bottom Bar */}
-      <div className="border-t border-white/10">
-        <Container>
-          <div className="py-5 sm:py-6 2xl:py-7 3xl:py-7 4xl:py-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px] sm:text-xs 2xl:text-[0.8rem] 3xl:text-sm 4xl:text-base text-white/30">
-            <p>&copy; {new Date().getFullYear()} MR Events. All rights reserved.</p>
-            <p>Designed with ♥ for unforgettable experiences.</p>
-          </div>
-        </Container>
-      </div>
-    </footer>
-  );
-};
-
-const BrandColumn = () => (
+export const BrandColumn = () => (
   <div className="space-y-4 2xl:space-y-5 4xl:space-y-6">
     <img src={logo} alt="MR Events" className="h-28 sm:h-32 2xl:h-34 3xl:h-36 4xl:h-40 w-auto" />
     <p className="text-white/50 text-xs sm:text-sm 2xl:text-[0.85rem] 3xl:text-base 4xl:text-lg leading-relaxed max-w-xs 2xl:max-w-sm 4xl:max-w-md">
@@ -54,7 +27,7 @@ const BrandColumn = () => (
   </div>
 );
 
-const LinksColumn = ({ title, items }) => (
+export const LinksColumn = ({ title, items }) => (
   <div>
     <h4 className="text-xs sm:text-sm 2xl:text-[0.85rem] 3xl:text-base 4xl:text-lg font-semibold uppercase tracking-widest text-gold mb-4 sm:mb-5 2xl:mb-6 4xl:mb-7">
       {title}
@@ -74,7 +47,7 @@ const LinksColumn = ({ title, items }) => (
   </div>
 );
 
-const ServicesColumn = () => (
+export const ServicesColumn = () => (
   <div>
     <h4 className="text-xs sm:text-sm 2xl:text-[0.85rem] 3xl:text-base 4xl:text-lg font-semibold uppercase tracking-widest text-gold mb-4 sm:mb-5 2xl:mb-6 4xl:mb-7">
       Our Services
@@ -89,7 +62,7 @@ const ServicesColumn = () => (
   </div>
 );
 
-const ContactColumn = () => (
+export const ContactColumn = () => (
   <div>
     <h4 className="text-xs sm:text-sm 2xl:text-[0.85rem] 3xl:text-base 4xl:text-lg font-semibold uppercase tracking-widest text-gold mb-4 sm:mb-5 2xl:mb-6 4xl:mb-7">
       Contact Us
@@ -101,14 +74,9 @@ const ContactColumn = () => (
       </li>
       <li className="flex items-start gap-3 text-xs sm:text-sm 2xl:text-[0.85rem] 3xl:text-base 4xl:text-lg text-white/40">
         <Phone className="w-4 h-4 2xl:w-4.5 2xl:h-4.5 3xl:w-5 3xl:h-5 4xl:w-6 4xl:h-6 text-gold mt-0.5 shrink-0" />
-        <div className="flex flex-col gap-1">
-          <a href={CONTACT_INFO.phoneHref} className="hover:text-gold transition-colors">
-            {CONTACT_INFO.phone}
-          </a>
-          <a href={CONTACT_INFO.phoneAltHref} className="hover:text-gold transition-colors">
-            {CONTACT_INFO.phoneAlt}
-          </a>
-        </div>
+        <a href={CONTACT_INFO.phoneHref} className="hover:text-gold transition-colors">
+          {CONTACT_INFO.phone}
+        </a>
       </li>
       <li className="flex items-center gap-3 text-xs sm:text-sm 2xl:text-[0.85rem] 3xl:text-base 4xl:text-lg text-white/40">
         <Mail className="w-4 h-4 2xl:w-4.5 2xl:h-4.5 3xl:w-5 3xl:h-5 4xl:w-6 4xl:h-6 text-gold shrink-0" />
@@ -119,5 +87,3 @@ const ContactColumn = () => (
     </ul>
   </div>
 );
-
-export default Footer;
