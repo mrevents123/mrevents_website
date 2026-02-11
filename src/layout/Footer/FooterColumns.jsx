@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { SERVICE_NAMES, SOCIALS, CONTACT_INFO } from "../../constants";
-import logo from "../../assets/MrEvents-removebg-preview.png";
+import { logo } from "../../assets";
 
 export const BrandColumn = () => (
   <div className="space-y-4 2xl:space-y-5 4xl:space-y-6">

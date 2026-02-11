@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
-import heroVideo1 from "../../assets/19399802-hd_1920_1080_50fps.mp4";
-import heroVideo2 from "../../assets/Event-Video-2.mp4";
+import { heroVideo1, heroVideo2 } from "../../assets";
 
 const VIDEOS = [heroVideo1, heroVideo2];
 const SLIDE_DURATION = 8000;

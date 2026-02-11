@@ -6,7 +6,7 @@ import useScrollPosition from "../../hooks/useScrollPosition";
 import useTheme from "../../hooks/useTheme";
 import DesktopNav from "./DesktopNav";
 import MobileMenu from "./MobileMenu";
-import logo from "../../assets/MrEvents-removebg-preview.png";
+import { logo } from "../../assets";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,9 +20,9 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl 2xl:max-w-[1400px] 3xl:max-w-[1600px] 4xl:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10 3xl:px-12 4xl:px-16">
-        <div className="flex items-center justify-between h-20 sm:h-22 md:h-24 lg:h-26 2xl:h-28 3xl:h-30 4xl:h-36">
+        <div className="flex items-center justify-between h-16 sm:h-18 md:h-20 lg:h-22 2xl:h-24 3xl:h-26 4xl:h-30">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="MR Events" className="h-20 sm:h-24 md:h-28 lg:h-32 2xl:h-34 3xl:h-36 4xl:h-40 w-auto" />
+            <img src={logo} alt="MR Events" className="h-14 sm:h-16 md:h-18 lg:h-20 2xl:h-22 3xl:h-24 4xl:h-28 w-auto" />
           </Link>
 
           <DesktopNav links={NAV_LINKS} isDark={isDark} toggleTheme={toggleTheme} />

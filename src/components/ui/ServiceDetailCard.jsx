@@ -1,17 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import ImageSlideshow from "./ImageSlideshow";
 
-const ServiceDetailCard = ({ icon: Icon, title, desc, detail, image, reversed }) => (
+const ServiceDetailCard = ({ icon: Icon, title, desc, detail, images, reversed }) => (
   <div className={`group grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 2xl:gap-10 3xl:gap-12 4xl:gap-16 items-center ${reversed ? "md:direction-rtl" : ""}`}>
     <div className={`relative rounded-2xl overflow-hidden h-64 sm:h-72 md:h-80 2xl:h-[22rem] 3xl:h-96 4xl:h-[30rem] ${reversed ? "md:order-2" : ""}`}>
-      <img
-        src={image}
-        alt={title}
-        loading="lazy"
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
-      <div className="absolute bottom-4 left-4 w-12 h-12 sm:w-14 sm:h-14 2xl:w-15 2xl:h-15 3xl:w-16 3xl:h-16 4xl:w-20 4xl:h-20 rounded-xl bg-white/15 backdrop-blur-md flex items-center justify-center text-gold border border-white/20">
+      <ImageSlideshow images={images} alt={title} interval={4000} />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute bottom-4 left-4 w-12 h-12 sm:w-14 sm:h-14 2xl:w-15 2xl:h-15 3xl:w-16 3xl:h-16 4xl:w-20 4xl:h-20 rounded-xl bg-white/15 backdrop-blur-md flex items-center justify-center text-gold border border-white/20 z-10">
         <Icon className="w-6 h-6 sm:w-7 sm:h-7 2xl:w-7.5 2xl:h-7.5 3xl:w-8 3xl:h-8 4xl:w-10 4xl:h-10" />
       </div>
     </div>
