@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { CLIENTELE, CLIENTELE_CATEGORIES } from "../../constants";
 import ClientCard from "../ui/ClientCard";
+import useInView from "../../hooks/useInView";
 
 const ClientFilterSection = () => {
   const [active, setActive] = useState("All");
   const filtered = active === "All" ? CLIENTELE : CLIENTELE.filter((c) => c.category === active);
+  const [ref, isInView] = useInView();
 
   return (
     <>
@@ -26,9 +28,20 @@ const ClientFilterSection = () => {
       </div>
 
       {/* Client Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 2xl:gap-6 3xl:gap-7 4xl:gap-10">
-        {filtered.map((client) => (
-          <ClientCard key={client.name} {...client} />
+      <div
+        ref={ref}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 2xl:gap-6 3xl:gap-7 4xl:gap-10"
+      >
+        {filtered.map((client, i) => (
+          <div
+            key={client.name}
+            className={`transition-all duration-700 ${
+              isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+            style={{ transitionDelay: isInView ? `${i * 100}ms` : "0ms" }}
+          >
+            <ClientCard {...client} />
+          </div>
         ))}
       </div>
 

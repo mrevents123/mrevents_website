@@ -12,7 +12,13 @@ export default defineConfig({
     },
   },
   server: {
-    host: true,          // listen on 0.0.0.0 (all interfaces)
-    allowedHosts: "all", // allow dev tunnel hostnames
+    host: true,
+    port: 5173,
+    cors: true,
+    allowedHosts: "all",
+    hmr: {
+      clientPort: 443,       // dev tunnel uses HTTPS (port 443)
+      protocol: "wss",       // secure websocket for tunnel
+    },
   },
 });

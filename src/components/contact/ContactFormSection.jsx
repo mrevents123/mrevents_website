@@ -5,6 +5,7 @@ import SuccessMessage from "../ui/SuccessMessage";
 import ErrorMessage from "../ui/ErrorMessage";
 import ContactInfoCard from "../ui/ContactInfoCard";
 import MapEmbed from "../ui/MapEmbed";
+import useInView from "../../hooks/useInView";
 
 const RATE_LIMIT_MS = 30000;
 
@@ -15,6 +16,9 @@ const ContactFormSection = () => {
   const [status, setStatus] = useState("idle");
   const [serverError, setServerError] = useState("");
   const lastSubmit = useRef(0);
+
+  const [formRef, formInView] = useInView();
+  const [infoRef, infoInView] = useInView();
 
   const validate = () => {
     const errs = {};
@@ -72,7 +76,12 @@ const ContactFormSection = () => {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 sm:gap-10 2xl:gap-12 3xl:gap-14 4xl:gap-18">
-      <div className="lg:col-span-3 relative">
+      <div
+        ref={formRef}
+        className={`lg:col-span-3 relative transition-all duration-700 ${
+          formInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+        }`}
+      >
         {status === "success" && <SuccessMessage />}
         {status === "error" && <ErrorMessage message={serverError} onRetry={handleRetry} />}
         {(status === "idle" || status === "sending") && (
@@ -87,7 +96,12 @@ const ContactFormSection = () => {
           />
         )}
       </div>
-      <div className="lg:col-span-2 space-y-6 2xl:space-y-7 3xl:space-y-8 4xl:space-y-10">
+      <div
+        ref={infoRef}
+        className={`lg:col-span-2 space-y-6 2xl:space-y-7 3xl:space-y-8 4xl:space-y-10 transition-all duration-700 delay-200 ${
+          infoInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+        }`}
+      >
         <ContactInfoCard />
         <MapEmbed />
       </div>

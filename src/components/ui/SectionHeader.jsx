@@ -1,6 +1,15 @@
+import useInView from "../../hooks/useInView";
+
 const SectionHeader = ({ tag, title, description }) => {
+  const [ref, isInView] = useInView();
+
   return (
-    <div className="text-center mb-10 sm:mb-14 md:mb-16 2xl:mb-18 3xl:mb-20 4xl:mb-28">
+    <div
+      ref={ref}
+      className={`text-center mb-10 sm:mb-14 md:mb-16 2xl:mb-18 3xl:mb-20 4xl:mb-28 transition-all duration-700 ${
+        isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+    >
       {tag && (
         <p className="text-gold-dark text-[10px] sm:text-xs 2xl:text-xs 3xl:text-sm 4xl:text-base font-semibold uppercase tracking-widest mb-2 sm:mb-3 4xl:mb-4">
           {tag}

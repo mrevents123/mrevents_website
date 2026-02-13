@@ -7,7 +7,7 @@ const Contact = () => (
   <>
     <SEO
       title="Contact Us"
-      description="Get in touch with MR Events. Reach out for enquiries, bookings, and custom event quotes."
+      description="Contact MR Events Bengaluru — call +91 72040 21323, WhatsApp, or fill our form for free event quotes. Wedding, corporate & party bookings in Yelahanka, Bangalore."
       path="/contact"
     />
     <div className="bg-white dark:bg-navy-dark pt-28 sm:pt-32 2xl:pt-36 3xl:pt-40 4xl:pt-48 pb-16 sm:pb-20 2xl:pb-24 3xl:pb-28 4xl:pb-36">
