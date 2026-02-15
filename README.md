@@ -1,3 +1,4 @@
+[![Node.js CI (pnpm)](https://github.com/Terence890/mrevent_frontend/actions/workflows/node.js.yml/badge.svg)](https://github.com/Terence890/mrevent_frontend/actions/workflows/node.js.yml)
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
