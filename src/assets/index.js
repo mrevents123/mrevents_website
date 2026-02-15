@@ -4,6 +4,7 @@ export { default as logo } from "./Mrevents-Logo.png";
 // ─── Hero Videos ───
 export { default as heroVideo1 } from "./Hero-Video-1.mp4";
 export { default as heroVideo2 } from "./Hero-Video-2.mp4";
+export { default as heroVideo3 } from "./Hero-Video-3.mp4";
 
 // ─── Corporate Event Photos ───
 export { default as corporate1 } from "./Corporate-Meeting-1.jpeg";

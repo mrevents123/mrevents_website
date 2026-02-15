@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { heroVideo1, heroVideo2 } from "../../assets";
+import { heroVideo1, heroVideo2, heroVideo3 } from "../../assets";
 
-const VIDEOS = [heroVideo1, heroVideo2];
+const VIDEOS = [heroVideo1, heroVideo2, heroVideo3];
 const SLIDE_DURATION = 8000;
 
 const HeroSection = () => {
@@ -48,7 +48,7 @@ const HeroSection = () => {
       ))}
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-navy/70" />
+      <div className="absolute inset-0 bg-navy/80" />
 
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2.5">
