@@ -15,7 +15,7 @@ export default defineConfig({
     host: true,
     port: 5173,
     cors: true,
-    allowedHosts: "all",
+    allowedHosts: ["all","devserver-master--adorable-pie-3a8589.netlify.app"],
     hmr: {
       clientPort: 443,       // dev tunnel uses HTTPS (port 443)
       protocol: "wss",       // secure websocket for tunnel
