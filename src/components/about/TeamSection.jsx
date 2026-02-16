@@ -13,7 +13,7 @@ const TeamSection = () => {
         <SectionHeader tag="The People" title="Meet Our Team" />
         <div
           ref={ref}
-          className="grid grid-cols md:grid-cols-4 gap-4 sm:gap-6 2xl:gap-7 3xl:gap-8 4xl:gap-10"
+          className="grid md:grid-cols-1 gap-4 sm:gap-6 2xl:gap-7 3xl:gap-8 4xl:gap-10"
         >
           {TEAM.map((member, i) => (
             <div
