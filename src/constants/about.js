@@ -27,8 +27,5 @@ export const VALUES = [
 ];
 
 export const TEAM = [
-  { name: "Mohit Rajput", role: "Founder & CEO" },
-  { name: "Sneha Verma", role: "Creative Director" },
-  { name: "Arjun Patel", role: "Operations Head" },
-  { name: "Riya Sharma", role: "Client Relations" },
+  { name: "Tapasi", role: "Founder & CEO — Event Manager" },
 ];
