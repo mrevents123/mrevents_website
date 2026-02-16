@@ -6,8 +6,6 @@ import useInView from "../../hooks/useInView";
 
 const TeamSection = () => {
   const [ref, isInView] = useInView();
-  // place single card spanning columns 3-4 on md+ so it appears center-right
-  const singlePlacement = TEAM.length === 1 ? "md:col-start-3 md:col-span-2 lg:col-start-3 lg:col-span-2" : "";
 
   return (
     <section className="py-12 sm:py-16 2xl:py-18 3xl:py-20 4xl:py-28 bg-gray-soft dark:bg-navy">
@@ -20,7 +18,7 @@ const TeamSection = () => {
           {TEAM.map((member, i) => (
             <div
               key={member.name}
-              className={`transition-all duration-700 ${singlePlacement} ${
+              className={`transition-all duration-700 ${
                 isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: isInView ? `${i * 150}ms` : "0ms" }}
