@@ -14,6 +14,13 @@ export const SERVICES = [
     images: [corporate1, corporate2, corporate3, corporate4],
   },
   {
+    icon: Rocket,
+    title: "Product Launches",
+    desc: "High-energy events that put your brand in the spotlight.",
+    detail: "Launch your product with maximum impact. We create immersive brand experiences with cutting-edge staging, media coordination, and audience engagement strategies that generate buzz.",
+    images: [corporate1, corporate3, corporate2, corporate4],
+  },
+  {
     icon: Heart,
     title: "Weddings",
     desc: "Timeless celebrations designed to reflect your unique love story.",
@@ -26,14 +33,7 @@ export const SERVICES = [
     desc: "Birthdays, anniversaries, and milestones made truly memorable.",
     detail: "Whether it's a milestone birthday, a golden anniversary, or a surprise celebration, we turn your personal occasions into extraordinary memories with stunning décor and seamless coordination.",
     images: [birthday1, birthday2, birthday3, birthday4, birthday5],
-  },
-  {
-    icon: Rocket,
-    title: "Product Launches",
-    desc: "High-energy events that put your brand in the spotlight.",
-    detail: "Launch your product with maximum impact. We create immersive brand experiences with cutting-edge staging, media coordination, and audience engagement strategies that generate buzz.",
-    images: [corporate1, corporate3, corporate2, corporate4],
-  },
+  }
 ];
 
 export const SERVICE_NAMES = [
