@@ -48,7 +48,7 @@ const HeroSection = () => {
       ))}
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-navy/80" />
+      <div className="absolute inset-0 bg-navy/50" />
 
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2.5">

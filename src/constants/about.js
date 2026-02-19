@@ -28,4 +28,5 @@ export const VALUES = [
 
 export const TEAM = [
   { name: "Tapasi", role: "Founder & CEO — Event Manager" },
+  { name: "Adarsh", role: "CoFounder" },
 ];
