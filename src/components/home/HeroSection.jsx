@@ -87,12 +87,12 @@ const HeroSection = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="mt-4 sm:mt-6 2xl:mt-7 3xl:mt-8 4xl:mt-10 text-sm sm:text-base md:text-lg 2xl:text-xl 3xl:text-xl 4xl:text-2xl text-white/60 max-w-md sm:max-w-lg md:max-w-2xl 2xl:max-w-2xl 3xl:max-w-3xl 4xl:max-w-4xl mx-auto leading-relaxed">
-          From elegant weddings to high-impact corporate events, we bring your
-          vision to life with precision, creativity, and passion.
-        </p>
+          <p className="mt-4 sm:mt-6 2xl:mt-7 3xl:mt-8 4xl:mt-10 text-sm sm:text-base md:text-lg 2xl:text-xl 3xl:text-xl 4xl:text-2xl text-white/60 max-w-md sm:max-w-lg md:max-w-2xl 2xl:max-w-2xl 3xl:max-w-3xl 4xl:max-w-4xl mx-auto leading-relaxed">
+            From unforgettable high-impact corporate events, we bring your
+            vision to life with precision, creativity, and passion.
+          </p>
 
-        {/* CTA Buttons */}
+          {/* CTA Buttons */}
         <div className="mt-8 sm:mt-10 2xl:mt-12 3xl:mt-14 4xl:mt-16 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 2xl:gap-5 4xl:gap-6">
           <Link
             to="/contact"
