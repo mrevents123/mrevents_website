@@ -142,7 +142,7 @@ const pageSchemas = {
 
 const SEO = ({ title, description, path = "/" }) => {
   const fullTitle = path === "/"
-    ? "MR Events | Best Event Management Company in Bengaluru"
+    ? "Event Management Bangalore — MR Events"
     : `${title} | MR Events – Bengaluru`;
 
   const schemas = [
