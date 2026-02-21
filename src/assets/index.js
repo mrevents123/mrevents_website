@@ -30,7 +30,7 @@ export { default as birthday4 } from "./Birthday-Party-4.jpeg";
 export { default as birthday5 } from "./Birthday-Party-5.jpeg";
 
 // ─── Clientele Logos ───
-export { default as logo1 } from "./Clientie_Logos/Aram_Experience.jpg";
+export { default as logo1 } from "./Clientie_Logos/Aram_Experience.png";
 export { default as logo2 } from "./Clientie_Logos/BEL.png";
 export { default as logo3 } from "./Clientie_Logos/Casagrand.webp";
 export { default as logo4 } from "./Clientie_Logos/CRESC.png";
