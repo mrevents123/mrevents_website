@@ -1,7 +1,7 @@
 import Container from "../components/ui/Container";
 import SectionHeader from "../components/ui/SectionHeader";
 import SEO from "../components/ui/SEO";
-import { logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11, logo12, logo13 } from "../assets";
+import { logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11, logo12, logo13 } from "../assets";
 import useInView from "../hooks/useInView";
 
 const Clientele = () => {
@@ -25,7 +25,6 @@ const Clientele = () => {
           <div className="mt-8">
             <div ref={ref} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center">
               {[
-                { src: logo1, alt: "Aram Experience" },
                 { src: logo2, alt: "BEL" },
                 { src: logo3, alt: "Casagrand" },
                 { src: logo4, alt: "CRESC" },
