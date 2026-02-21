@@ -28,3 +28,18 @@ export { default as birthday2 } from "./Birthday-Part-2.jpeg";
 export { default as birthday3 } from "./Birthday-Party-3.jpeg";
 export { default as birthday4 } from "./Birthday-Party-4.jpeg";
 export { default as birthday5 } from "./Birthday-Party-5.jpeg";
+
+// ─── Clientele Logos ───
+export { default as logo1 } from "./Clientie_Logos/Aram_Experience.jpg";
+export { default as logo2 } from "./Clientie_Logos/BEL.png";
+export { default as logo3 } from "./Clientie_Logos/Casagrand.webp";
+export { default as logo4 } from "./Clientie_Logos/CRESC.png";
+export { default as logo5 } from "./Clientie_Logos/finacplus.svg";
+export { default as logo6 } from "./Clientie_Logos/Firstsource.svg";
+export { default as logo7 } from "./Clientie_Logos/Havmor_icecream.png";
+export { default as logo8 } from "./Clientie_Logos/itc-limited.png";
+export { default as logo9 } from "./Clientie_Logos/Jamind_Technologies.png";
+export { default as logo10 } from "./Clientie_Logos/newasterlogo.webp";
+export { default as logo11 } from "./Clientie_Logos/paragon.png";
+export { default as logo12 } from "./Clientie_Logos/Unimech.png";
+export { default as logo13 } from "./Clientie_Logos/Vendantu.png";

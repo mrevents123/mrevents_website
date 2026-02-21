@@ -32,3 +32,46 @@ h1, h2, h3, h4, h5 {
     letter-spacing: -0.015em;
   }
 }
+
+/* Infinite marquee for client logos */
+.marquee {
+  position: relative;
+}
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  /* duplicate items in markup, so move left by 50% */
+  animation: marquee 22s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0%); }
+  to { transform: translateX(-50%); }
+}
+
+/* Pause on hover/focus for accessibility */
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Make logos responsive inside the marquee */
+.marquee img {
+  max-height: 3.5rem;
+  max-width: 8rem;
+}
+@media (min-width: 768px) {
+  .marquee img { max-height: 4.5rem; }
+}
+@media (min-width: 1280px) {
+  .marquee img { max-height: 5.25rem; }
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}

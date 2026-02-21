@@ -1,5 +1,6 @@
 import HeroSection from "../components/home/HeroSection";
 import ServicesSection from "../components/home/ServicesSection";
+import ClienteleMarquee from "../components/home/ClienteleMarquee";
 import TestimonialsSection from "../components/home/TestimonialsSection";
 import SEO from "../components/ui/SEO";
 
@@ -14,6 +15,7 @@ const Home = () => {
       <div className="font-body">
         <HeroSection />
         <ServicesSection />
+        <ClienteleMarquee />
         <TestimonialsSection />
       </div>
     </>
