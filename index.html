@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://wa.me https://mrevents.co.in/.netlify/functions/; frame-src https://www.google.com; media-src 'self'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://api.fontshare.com; font-src 'self' https://fonts.gstatic.com https://api.fontshare.com; img-src 'self' data: blob:; connect-src 'self' https://wa.me https://mrevents.co.in/.netlify/functions/; frame-src https://www.google.com; media-src 'self'" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/og-image.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,6 +37,43 @@
     <meta name="twitter:image" content="https://mrevents.co.in/og-image.png" />
 
     <title>MR Events | Best Event Management Company in Bengaluru</title>
+    <!-- LocalBusiness JSON-LD for SEO and rich results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EventPlanner",
+        "@id": "https://mrevents.co.in/#organization",
+        "name": "MR Events",
+        "url": "https://mrevents.co.in",
+        "logo": "https://mrevents.co.in/og-image.png",
+        "image": "https://mrevents.co.in/og-image.png",
+        "description": "MR Events — Best event management company in Bengaluru. Weddings, corporate events, birthday parties & product launches.",
+        "telephone": "+917204021323",
+        "email": "tapasi@mrevents.co.in",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "#739, 2nd Floor, 4th Phase Main Rd.",
+          "addressLocality": "Yelahanka New Town",
+          "addressRegion": "Karnataka",
+          "postalCode": "560064",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 13.1007,
+          "longitude": 77.5946
+        },
+        "areaServed": ["Bengaluru", "Karnataka", "India"],
+        "sameAs": ["https://www.instagram.com/mrevents.co.in/"],
+        "priceRange": "\u20B9\u20B9–\u20B9\u20B9\u20B9\u20B9",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      }
+    </script>
     <!-- Google Fonts: Playfair Display + Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

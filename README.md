@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/51ed0824-b5f0-4bf4-afe5-1c9a7cc4891b/deploy-status)](https://app.netlify.com/projects/adorable-pie-3a8589/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bd816118-e692-4439-891a-0bfe2267b197/deploy-status)](https://app.netlify.com/projects/mrevents123/deploys)
 [![Node.js CI (pnpm)](https://github.com/Terence890/mrevent_frontend/actions/workflows/node.js.yml/badge.svg)](https://github.com/Terence890/mrevent_frontend/actions/workflows/node.js.yml)
 # React + Vite
 
